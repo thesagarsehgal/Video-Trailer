@@ -34,10 +34,12 @@ def get(image_path):
         face_image = cv2.resize(face_image, (48, 48))
         face_image = np.reshape(face_image, (1, 48, 48, 1))
         predicted_score = np.max(loaded_model.predict(face_image))
-        print(loaded_model.predict(face_image))
-        predicted_class=np.argmax(loaded_model.predict(face_image))
+        ans=loaded_model.predict(face_image)
+        return ans[0][-1]
+        # predicted_class=np.argmax(loaded_model.predict(face_image))
         # print("Score is: %.2f and class is %d" %(predicted_score, predicted_class))
         # (face_image)
     else:
+        return None
         print("No face found yet")
       # Hit 'q' on the keyboard to quit!

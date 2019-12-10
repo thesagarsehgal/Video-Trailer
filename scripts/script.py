@@ -9,13 +9,13 @@ from get_least_neutral import get_least_neutral
 
 def summarize(video_id, summary_length):
 	# download video
-	# video_path = download_video(video_id,"../data/", "video")
-	video_path = "../data/video.mp4"
+	video_path = download_video(video_id,"../data/", "video")
+	# video_path = "../data/video.mp4"
 	print("Video Path=>", video_path)
 	
 	# get subtitles of the video
-	# subtitles_path = get_subtitles(video_id,"../data/")
-	subtitles_path = "../data/subtitles.json"
+	subtitles_path = get_subtitles(video_id,"../data/")
+	# subtitles_path = "../data/subtitles.json"
 	print("Subtitles Path=>", subtitles_path)
 	
 	# extract frames from the video
@@ -35,12 +35,6 @@ def summarize(video_id, summary_length):
 	start,end = get_least_neutral(data_in_list, summary_length, subtitles_path)
 
 	# cut the emotional frmaes
-	'''
-	# do not use
-	# clips=[]
-	# for i in range(len(start)):
-	# 	clips.append(cut_video(video_path,start[i], end[i], "../data/clips/", i))
-	'''
 	# merge the emotional frames
 	# save in the static folder
 	path = merge_video(video_path,start,end,"../static/")

@@ -14,8 +14,8 @@ def get_emotions(frame_list_path, target_path):
 			c+=1
 			continue
 		else:
-			emoions=get("../data/"+i.split(,)[1])
-			x=i.strip()+","+str()
+			emoions=get("../data/"+i.split(",")[1])
+			x=i.strip()+","+str(emoions)
 			f2.write(x+"\n")
 	f1.close()
 	f2.close()
