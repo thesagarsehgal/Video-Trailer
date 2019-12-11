@@ -1,16 +1,47 @@
 # Video-Trailer
 A Video Summarizer
 
-### Steps
-- [ ] Divide the video into frames and take 1 single frame from a continuous frames with the timings of the frame.
-- [ ] Extract faces from all the faces.
-- [ ] Determine the emotion of all the frames from the collective emotion of all corresponding faces.
-- [ ] Collect the frames with corresponding emotion values
-- [ ] Rank the frames accoring to the neutality in the steps
-- [ ] Collect the frames which are required.
-- [ ] Generate sentences from CC Extractor.
-- [ ] From the frame timings, find all the sentences that would be needed.
-- [ ] Get the start and end time of the frame.
-- [ ] Trim the video from the timings specified.
-- [ ] Make an interface which can upload a video and can also be used to donload a video.
+Medium Post:- https://medium.com/@pradeep.t16/video-summarization-47059dec2564
 
+Github Repository:- https://github.com/sagar-sehgal/Video-Trailer
+
+Group Members:-
+
+Wasim 		S20160010107
+Shubham Gupta 	S20160010088
+Pawan Kalyan 	S20160010020
+Sagar 		S20160010075
+Pradeep Turan 	S20160010064
+
+
+
+## Installation Steps
+
+1. Clone the repository
+```
+https://github.com/sagar-sehgal/Video-Trailer
+```
+2. Make a virtual enviornment
+```
+virtualenv venv --python=python3
+```
+3. Activate the virtual enviornment
+```
+source venv/bin/activate
+```
+4. Shift to the folder
+```
+cd Video-Trailer
+```
+5. Install the dependencies
+```
+pip install -r requirements.txt
+```
+6. To run the interface 
+```
+python interface_backend.py
+```
+7. To run the summarizer separately
+```
+python -i scripts/script.py
+```
